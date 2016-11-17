@@ -1,0 +1,12 @@
+module sig
+
+signature constructors
+
+           : String -> ID
+           : Module -> Start
+  Module   : ID * List(Def) -> Module
+  Entity   : ID * List(Decl) -> Def
+  Property : ID * Type -> Decl
+  Method   : ID * Type -> Decl
+           : String -> Decl // Nonsense signature, here to complicate design.
+  StringTy : Type
